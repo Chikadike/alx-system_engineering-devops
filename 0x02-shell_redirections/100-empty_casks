@@ -1,2 +1,2 @@
 #!/bln/bash
-find . -empty -printf %f'_\ni'
+find . -empty -printf %f'\n'
