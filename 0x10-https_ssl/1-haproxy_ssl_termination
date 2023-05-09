@@ -42,9 +42,9 @@ frontend devchyd.tech-http-frontend
         default_backend devchyd.tech-backend
 
 frontend devchyd.tech-https-frontend
-	bind *:443 ssl crt /etc/haproxy/certs/allfiles.pem
-	http-request set-header X-Forwarded-Proto https
-	default_backend devchyd.tech-backend
+        bind *:443 ssl crt /etc/ssl/www.devchyd.tech/www.devchyd.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend devchyd.tech-backend
 
 backend devchyd-backend
         balance roundrobin
