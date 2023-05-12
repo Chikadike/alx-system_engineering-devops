@@ -33,21 +33,24 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-#--devchyd.tech-params-begin--
-
-
-frontend devchyd.tech-http-frontend
+frontend devchyd.tech
         bind *:80
-        http-request set_header X-Forwarded-Proto http
-        default_backend devchyd.tech-backend
-
-frontend devchyd.tech-https-frontend
-        bind *:443 ssl crt /etc/ssl/www.devchyd.tech/www.devchyd.tech.pem
+        # Listen on 443 for ssl connections
+        bind *:443 ssl crt /etc/ssl/certs/www.devchyd.tech/www.devchyd.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend devchyd.tech-backend
 
-backend devchyd-backend
+        # Redirect http traffic
+        http-request redirect scheme https unless { ssl_fc }
+        default_backend myservers
+
+        # Lets encrypt validation path
+        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+        use_backend letsencrypt-backend if letsencrypt-acl
+
+backend myservers
         balance roundrobin
-        server 185734-web-01 18.204.5.39:80 check
-        server 185734-web-02 54.237.126.127:80 check
-#--devchyd.tech-params-end--
+        server web-01 18.204.5.39:80 check
+        server web-02 54.237.126.127:80 check
+
+backend letsencrpt-backend
+        server certbot 127.0.0.1:8888
