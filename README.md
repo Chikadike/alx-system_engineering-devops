@@ -1,6 +1,6 @@
 # alx-system_engineering-devops
 I'm now a ALX student, this is my third repository as a full-stack engineer.
-What are the steps of a TLS handshake?
+TLS handshake
 TLS handshakes are a series of datagrams, or messages, exchanged by a client and a server. A TLS handshake involves multiple steps, as the client and server exchange the information necessary for completing the handshake and making further conversation possible.
 
 The exact steps within a TLS handshake will vary depending upon the kind of key exchange algorithm used and the cipher suites supported by both sides. The RSA key exchange algorithm, while now considered not secure, was used in versions of TLS before 1.3. It goes roughly as follows:
