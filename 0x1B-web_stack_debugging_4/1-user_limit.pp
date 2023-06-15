@@ -1,4 +1,4 @@
-#Enable the user holberton to login and open files without any error
+#Enable the user holberton to login and open files witout error
 
 # Increase hard file limit for holberton user
 exec { 'increase-hard-file-limit-for-holberton-user':
