@@ -3,6 +3,11 @@ Python
 Scripting
 Back-end
 API
+ By: Tim Britton - Cohort #1
+ Weight: 1
+ Project will start Aug 8, 2023 6:00 AM, must end by Aug 9, 2023 6:00 AM
+ Checker was released at Aug 8, 2023 12:00 PM
+ An auto review will be launched at the deadline
 
 
 Background Context
@@ -45,7 +50,6 @@ You must use the Requests module for sending HTTP requests to the Reddit API
 Tasks
 0. How many subs?
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Write a function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit. If an invalid subreddit is given, the function should return 0.
 
 Hint: No authentication is necessary for most features of the Reddit API. If you’re getting errors related to Too Many Requests, ensure you’re setting a custom User-Agent.
@@ -77,10 +81,9 @@ Repo:
 GitHub repository: alx-system_engineering-devops
 Directory: 0x16-api_advanced
 File: 0-subs.py
-   
+  
 1. Top Ten
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Write a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
 
 Requirements:
@@ -120,10 +123,9 @@ Repo:
 GitHub repository: alx-system_engineering-devops
 Directory: 0x16-api_advanced
 File: 1-top_ten.py
-   
+  
 2. Recurse it!
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
 Write a recursive function that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit. If no results are found for the given subreddit, the function should return None.
 
 Hint: The Reddit API uses pagination for separating pages of responses.
@@ -162,10 +164,9 @@ Repo:
 GitHub repository: alx-system_engineering-devops
 Directory: 0x16-api_advanced
 File: 2-recurse.py
-   
+  
 3. Count it!
 #advanced
-Score: 0.0% (Checks completed: 0.0%)
 Write a recursive function that queries the Reddit API, parses the title of all hot articles, and prints a sorted count of given keywords (case-insensitive, delimited by spaces. Javascript should count as javascript, but java should not).
 
 Requirements:
@@ -213,3 +214,4 @@ Repo:
 GitHub repository: alx-system_engineering-devops
 Directory: 0x16-api_advanced
 File: 100-count.py
+
