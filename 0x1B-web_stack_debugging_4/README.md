@@ -5,8 +5,8 @@ Scripting
 Debugging
  By: Sylvain Kalache, co-founder at Holberton School
  Weight: 1
- Project will start Jun 13, 2023 6:00 AM, must end by Jun 16, 2023 6:00 AM
- Checker was released at Jun 15, 2023 12:00 PM
+ Project will start Aug 14, 2023 6:00 AM, must end by Aug 18, 2023 6:00 AM
+ Checker will be released at Aug 17, 2023 6:00 AM
  An auto review will be launched at the deadline
 
 
@@ -153,7 +153,7 @@ Repo:
 GitHub repository: alx-system_engineering-devops
 Directory: 0x1B-web_stack_debugging_4
 File: 0-the_sky_is_the_limit_not.pp
-   
+  
 1. User limit
 #advanced
 Change the OS configuration so that it is possible to login with the holberton user and open a file without any error message.
